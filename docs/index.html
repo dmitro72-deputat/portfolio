@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Developer Portfolio | OCR, Automation &amp; Software Performance</title>
+<meta name="description" content="Portfolio for remote document automation, local OCR and AI integrations, software performance, and prototypes with reproducible evidence.">
+<meta name="theme-color" content="#07110f">
+<link rel="canonical" href="https://dmitro72-deputat.github.io/portfolio/">
+<link rel="alternate" hreflang="en" href="https://dmitro72-deputat.github.io/portfolio/">
+<link rel="alternate" hreflang="uk" href="https://dmitro72-deputat.github.io/portfolio/uk.html">
+<link rel="alternate" hreflang="x-default" href="https://dmitro72-deputat.github.io/portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Developer Portfolio | OCR, Automation &amp; Software Performance">
+<meta property="og:description" content="Portfolio for remote document automation, local OCR and AI integrations, software performance, and prototypes with reproducible evidence.">
+<meta property="og:url" content="https://dmitro72-deputat.github.io/portfolio/">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://dmitro72-deputat.github.io/portfolio/assets/portfolio-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Portfolio for document automation, local AI and software performance">
+<link rel="stylesheet" href="./style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": "https://dmitro72-deputat.github.io/portfolio/",
+  "inLanguage": "en",
+  "mainEntity": {
+    "@type": "Person",
+    "alternateName": "dmitro72-deputat",
+    "url": "https://dmitro72-deputat.github.io/portfolio/",
+    "sameAs": "https://github.com/dmitro72-deputat",
+    "knowsAbout": ["Optical character recognition", "Document automation", "Local AI", "Software performance"]
+  }
+}
+</script>
+<script defer src="./logic.js"></script>
+<script defer src="./app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+<a class="brand" href="./index.html"><span class="mark" aria-hidden="true">&lt;/&gt;</span>Developer Portfolio</a>
+<nav aria-label="Main navigation">
+<a href="#projects">Projects</a><a href="#services">Services</a><a href="#contact">Contact</a>
+<a class="button" href="./uk.html" hreflang="uk" lang="uk">Українська</a>
+</nav>
+</header>
+<main id="main">
+<div class="hero"><div class="inner hero-grid">
+<div><h1>From messy documents to reliable data</h1><p class="lead">Document automation, local AI integrations and software performance work, with prototypes and results you can verify.</p><div class="actions"><a class="button primary" href="#projects">View projects</a><a class="button" href="#contact">Discuss a project</a></div></div>
+<aside class="hero-evidence" aria-label="Work at a glance">
+<ul><li><span>Documents</span>Ukrainian and English OCR</li><li><span>Performance</span>Runtime and memory benchmarks</li><li><span>Automation</span>Local tools and testable prototypes</li></ul>
+</aside>
+</div></div>
+<section id="about" class="inner narrow"><h2>About</h2><p>I build tools that turn scans, CSVs and other inputs into reliable data. For performance work, I start with a reproducible baseline and check that the output stays equivalent.</p></section>
+
+<section id="projects" class="inner">
+<h2>Projects</h2>
+<article class="project">
+<div><h3>DocuMind Smart Vision</h3><p>Document scanning and organization for iOS, alongside an Android prototype for extracting document fields locally. The rules matched 79 of 80 expected fields across 20 synthetic Ukrainian, English and mixed-language documents.</p><p class="meta">The Android prototype keeps extraction local and its tested APK has no Internet permission. Physical-device and Gemini Nano validation are pending.</p></div>
+<div class="card evidence"><h4>Ukrainian OCR example</h4><p>Linux Tesseract with <code>ukr+eng</code> read the date and total and misread the document number. The extraction rules left that field blank.</p>
+<details><summary>View the synthetic receipt and result</summary><img src="./assets/synthetic-receipt.png" width="1120" height="520" loading="lazy" alt="Synthetic receipt OCR-0010, dated 26 November 2026, totaling 135 Ukrainian hryvnias"><p><code>2026-11-26</code> · <code>135.00 UAH</code> · document number withheld</p></details></div>
+</article>
+<article class="project">
+<div><h3>Vesuvius Challenge — Villa</h3><p>Three optimizations developed in a fork for the patch cache writer, 3D ink planning and sparse OME-Zarr pyramid generation. These are operation-level benchmarks.</p><p class="meta">The planning output matched exactly. Six pyramid levels and the cache JSON matched byte for byte in their respective benchmarks. One bounded trained CPU check also matched across four configurations.</p></div>
+<div class="card evidence"><dl class="metrics"><div><dt>Cache Writer · 100,000 synthetic entries</dt><dd>1.101 → 0.246 s</dd><dd class="meta">62.606 → 1.356 MiB peak Python allocations. <a href="https://github.com/dmitro72-deputat/villa-validation/actions/runs/45852157905">Cache tests</a></dd></div>
+<div><dt>Native Ink Occupancy · Paris 4 surface</dt><dd>12.317 → 4.796 s</dd><dd class="meta">683.8 → 275.5 MiB peak RSS.</dd></div>
+<div><dt>Sparse Native Ink Pyramid · five prediction chunks</dt><dd>49.004 → 3.018 s</dd><dd class="meta">614.6 → 591.7 MiB peak RSS.</dd></div></dl>
+<p class="links"><a href="https://github.com/dmitro72-deputat/villa-validation/actions/runs/45925374244">Linux and benchmarks</a><a href="https://github.com/dmitro72-deputat/villa-validation/actions/runs/45925374241">Windows tests</a></p></div>
+</article>
+<article class="project">
+<div><h3>CSV Smart Validator</h3><p>A browser CSV validator with two repair interfaces. Flagsmith Experimentation assigned the variants and recorded exposures and successful exports. CSV content stays in the browser.</p><p class="meta">Submitted to Toggle Wars, as reported by the project owner.</p></div>
+<div class="card evidence"><h4>Simulated browser traffic</h4><dl class="compact"><div><dt>Playwright sessions</dt><dd>160</dd></div><div><dt>Valid exports</dt><dd>115</dd></div><div><dt>Passing tests</dt><dd>27</dd></div></dl><p>Control 47/78. Inline 68/82. The simulation verified event collection.</p><p class="links"><a href="https://github.com/dmitro72-deputat/csv-smart-validator">GitHub</a><a href="https://raw.githubusercontent.com/dmitro72-deputat/csv-smart-validator/322075c3cfb2499868e1639f7582802ea14d7ffa/artifacts/toggle-wars-demo.mp4">Demo MP4</a><a href="https://raw.githubusercontent.com/dmitro72-deputat/csv-smart-validator/322075c3cfb2499868e1639f7582802ea14d7ffa/artifacts/flagsmith-dashboard.png">Flagsmith results</a></p></div>
+</article></section>
+<div class="band"><section id="skills" class="inner"><h2>Technical Skills</h2><ul class="skill-list"><li>Swift, SwiftUI, Apple Vision, PDFKit</li><li>Kotlin, Android, Tesseract, ML Kit</li><li>Python, NumPy, C++, OME-Zarr</li><li>JavaScript, TypeScript, Playwright, Flagsmith</li></ul></section></div>
+<section id="services" class="inner"><h2>Services</h2><ul class="services"><li><h3>Document processing and OCR</h3><p>Text recognition, source-linked fields and human review workflows.</p></li><li><h3>Automation and local AI</h3><p>CSV validation, data cleanup and scoped prototypes for local processing.</p></li><li><h3>Software performance</h3><p>Runtime and memory profiling, benchmark design and equivalence tests.</p></li></ul></section>
+<section id="tools" class="inner">
+<p class="eyebrow">Live demos</p><h2>Interactive tools</h2><p class="lead">Try the sample data or paste your own. Processing runs locally in this page.</p>
+<div class="modes" role="group" aria-label="Interactive tools">
+<button type="button" data-mode="text" aria-pressed="true">Text cleanup</button>
+<button type="button" data-mode="data" aria-pressed="false">CSV and JSON</button>
+<button type="button" data-mode="doc" aria-pressed="false">Document templates</button>
+</div>
+<div class="work-grid">
+<form class="card" id="tool">
+<h3 id="tool-title">Text cleanup</h3><p class="meta" id="hint"></p>
+<div id="format-group" hidden><label for="format">Data format</label><select id="format"><option value="CSV">CSV — comma</option><option value="CSV_SEMI">CSV — semicolon</option><option value="TSV">TSV — tab</option><option>JSON</option></select></div>
+<label id="input-label" for="input">Input</label>
+<textarea id="input" maxlength="200000" spellcheck="false" aria-describedby="hint"></textarea>
+<div id="values-group" hidden><label for="values">Values (JSON object)</label><textarea id="values" maxlength="200000" spellcheck="false"></textarea></div>
+<div class="actions"><button class="primary" id="run">Run</button><button type="button" id="sample">Load example</button></div>
+</form>
+<div class="card"><h3 id="result-label">Result</h3><p class="status" id="status" role="status"></p>
+<pre class="output" id="result" tabindex="0" aria-labelledby="result-label"></pre>
+<div class="actions output-actions"><button type="button" id="copy" disabled>Copy</button><button type="button" id="download" disabled>Download</button></div>
+</div></div>
+<noscript><p>Enable JavaScript to run the interactive tools.</p></noscript>
+</section>
+<div class="band"><section id="availability" class="inner availability"><div>
+<h2>Available for Remote Work</h2>
+<p>Open to international collaboration on scoped prototypes, implementation work and technical audits.</p>
+</div><div id="contact"><h2>Contact</h2><p>Share the outcome you need and your constraints. For public GitHub conversations, use examples with fictional or anonymized data.</p><a class="button primary" href="https://github.com/dmitro72-deputat">GitHub profile</a></div></section></div>
+</main>
+<footer><a href="https://github.com/dmitro72-deputat">GitHub</a> · The demos use synthetic samples.</footer>
+</body></html>

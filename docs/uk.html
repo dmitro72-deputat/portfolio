@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Портфоліо розробника · OCR, автоматизація й оптимізація</title>
+<meta name="description" content="Розробка локальних OCR та AI-інтеграцій, автоматизація CSV і оптимізація програм. Проєкти DocuMind, Villa та CSV Smart Validator.">
+<meta name="theme-color" content="#07110f">
+<link rel="canonical" href="https://dmitro72-deputat.github.io/portfolio/uk.html">
+<link rel="alternate" hreflang="en" href="https://dmitro72-deputat.github.io/portfolio/">
+<link rel="alternate" hreflang="uk" href="https://dmitro72-deputat.github.io/portfolio/uk.html">
+<link rel="alternate" hreflang="x-default" href="https://dmitro72-deputat.github.io/portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Портфоліо розробника · OCR, автоматизація й оптимізація">
+<meta property="og:description" content="Розробка локальних OCR та AI-інтеграцій, автоматизація CSV і оптимізація програм. Проєкти DocuMind, Villa та CSV Smart Validator.">
+<meta property="og:url" content="https://dmitro72-deputat.github.io/portfolio/uk.html">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:image" content="https://dmitro72-deputat.github.io/portfolio/assets/portfolio-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Портфоліо з автоматизації документів, локального AI та оптимізації програм">
+<link rel="stylesheet" href="./style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": "https://dmitro72-deputat.github.io/portfolio/uk.html",
+  "inLanguage": "uk",
+  "mainEntity": {
+    "@type": "Person",
+    "alternateName": "dmitro72-deputat",
+    "url": "https://dmitro72-deputat.github.io/portfolio/",
+    "sameAs": "https://github.com/dmitro72-deputat",
+    "knowsAbout": ["Optical character recognition", "Document automation", "Local AI", "Software performance"]
+  }
+}
+</script>
+<script defer src="./logic.js"></script>
+<script defer src="./app.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти до вмісту</a>
+<header>
+<a class="brand" href="./uk.html"><span class="mark" aria-hidden="true">&lt;/&gt;</span>Портфоліо розробника</a>
+<nav aria-label="Головна навігація">
+<a href="#projects">Проєкти</a><a href="#services">Послуги</a><a href="#contact">Контакт</a>
+<a class="button" href="./index.html" hreflang="en" lang="en">English</a>
+</nav>
+</header>
+<main id="main">
+<div class="hero"><div class="inner hero-grid">
+<div><h1>Від документа до перевірених даних</h1><p class="lead">Автоматизація документів, локальні AI-інтеграції та оптимізація програм. Від невеликого прототипу до результату, який можна перевірити.</p><div class="actions"><a class="button primary" href="#projects">Переглянути проєкти</a><a class="button" href="#contact">Контакт</a></div></div>
+<aside class="hero-evidence" aria-label="Коротко про роботу">
+<ul><li><span>Документи</span>OCR українською та англійською</li><li><span>Продуктивність</span>Бенчмарки часу й пам’яті</li><li><span>Автоматизація</span>Локальні інструменти та прототипи</li></ul>
+</aside>
+</div></div>
+<section id="about" class="inner narrow"><h2>Про роботу</h2><p>Працюю над інструментами, що перетворюють скани, CSV та інші вхідні дані на перевірений результат. Задачі з продуктивності починаю з відтворюваного виміру.</p></section>
+
+<section id="projects" class="inner">
+<h2>Проєкти</h2>
+<article class="project">
+<div><h3>DocuMind Smart Vision</h3><p>Сканування й обробка документів на iOS та окремий Android-прототип локального вилучення реквізитів. У тестовому наборі з українським та англійським текстом результати правил збіглися для 79 із 80 полів на 20 синтетичних документах.</p><p class="meta">Показник стосується правил. Фізичний телефон і Gemini Nano очікують перевірки.</p></div>
+<div class="card evidence"><h4>Приклад українського OCR</h4><p>Linux Tesseract із <code>ukr+eng</code> прочитав дату й суму, але спотворив номер. Правила залишили номер порожнім.</p>
+<details><summary>Показати квитанцію та результат</summary><img src="./assets/synthetic-receipt.png" width="1120" height="520" loading="lazy" alt="Синтетична квитанція OCR-0010, датована 26.11.2026, на суму 135 гривень"><p><code>2026-11-26</code> · <code>135.00 UAH</code> · номер не прийнято</p></details></div>
+</article>
+<article class="project">
+<div><h3>Vesuvius Challenge — Villa</h3><p>Три зміни у форку для запису кешу, планування 3D-інференсу та побудови OME-Zarr. Виміри стосуються окремих операцій.</p><p class="meta">Збіг плану та побайтова ідентичність шести рівнів OME-Zarr перевірені у відповідних сценаріях.</p></div>
+<div class="card evidence"><dl class="metrics"><div><dt>Cache Writer · 100&nbsp;000 синтетичних записів</dt><dd>1,101 → 0,246 с</dd><dd class="meta">62,606 → 1,356 MiB пікових Python-алокацій. <a href="https://github.com/dmitro72-deputat/villa-validation/actions/runs/45852157905">CI</a></dd></div>
+<div><dt>Native Ink Occupancy · поверхня Paris 4</dt><dd>12,317 → 4,796 с</dd><dd class="meta">683,8 → 275,5 MiB пікового RSS.</dd></div>
+<div><dt>Sparse Native Ink Pyramid · п’ять чанків прогнозу</dt><dd>49,004 → 3,018 с</dd><dd class="meta">614,6 → 591,7 MiB пікового RSS.</dd></div></dl>
+<p class="links"><a href="https://github.com/dmitro72-deputat/villa-validation/actions/runs/45925374244">Linux і бенчмарки</a><a href="https://github.com/dmitro72-deputat/villa-validation/actions/runs/45925374241">Тести Windows</a></p></div>
+</article>
+<article class="project">
+<div><h3>CSV Smart Validator</h3><p>Браузерна перевірка CSV і два інтерфейси виправлення. Flagsmith Experimentation призначав варіанти і реєстрував покази та валідні експорти. Обробка самого CSV відбувається у вкладці.</p><p class="meta">Подано на Toggle Wars за інформацією власника.</p></div>
+<div class="card evidence"><h4>Simulated browser traffic</h4><dl class="compact"><div><dt>Сеанси Playwright</dt><dd>160</dd></div><div><dt>Валідні експорти</dt><dd>115</dd></div><div><dt>Успішні тести</dt><dd>27</dd></div></dl><p>Контроль 47/78. Inline 68/82. Симуляція підтверджує збір подій.</p><p class="links"><a href="https://github.com/dmitro72-deputat/csv-smart-validator">GitHub</a><a href="https://raw.githubusercontent.com/dmitro72-deputat/csv-smart-validator/322075c3cfb2499868e1639f7582802ea14d7ffa/artifacts/toggle-wars-demo.mp4">Демо MP4</a><a href="https://raw.githubusercontent.com/dmitro72-deputat/csv-smart-validator/322075c3cfb2499868e1639f7582802ea14d7ffa/artifacts/flagsmith-dashboard.png">Панель Flagsmith</a></p></div>
+</article></section>
+<div class="band"><section id="skills" class="inner"><h2>Технічні навички</h2><ul class="skill-list"><li>Swift, SwiftUI, Apple Vision, PDFKit</li><li>Kotlin, Android, Tesseract, ML Kit</li><li>Python, NumPy, C++, OME-Zarr</li><li>JavaScript, TypeScript, Playwright, Flagsmith</li></ul></section></div>
+<section id="services" class="inner"><h2>Послуги</h2><ul class="services"><li><h3>Документи й OCR</h3><p>Розпізнавання, вилучення полів з прив’язкою до джерела та ручна перевірка.</p></li><li><h3>Автоматизація й локальні AI</h3><p>Перевірка CSV, підготовка даних і прототипи з локальною обробкою.</p></li><li><h3>Продуктивність програм</h3><p>Профілювання часу й пам’яті та тести еквівалентності.</p></li></ul></section>
+<section id="tools" class="inner">
+<p class="eyebrow">Робочі демо</p><h2>Інтерактивні інструменти</h2><p class="lead">Спробуйте зразок або вставте свої дані. Сторінка обробляє їх локально.</p>
+<div class="modes" role="group" aria-label="Інтерактивні інструменти">
+<button type="button" data-mode="text" aria-pressed="true">Очищення тексту</button>
+<button type="button" data-mode="data" aria-pressed="false">CSV та JSON</button>
+<button type="button" data-mode="doc" aria-pressed="false">Шаблони документів</button>
+</div>
+<div class="work-grid">
+<form class="card" id="tool">
+<h3 id="tool-title">Очищення тексту</h3><p class="meta" id="hint"></p>
+<div id="format-group" hidden><label for="format">Формат даних</label><select id="format"><option value="CSV">CSV — кома</option><option value="CSV_SEMI">CSV — крапка з комою</option><option value="TSV">TSV — табуляція</option><option>JSON</option></select></div>
+<label id="input-label" for="input">Вхідні дані</label>
+<textarea id="input" maxlength="200000" spellcheck="false" aria-describedby="hint"></textarea>
+<div id="values-group" hidden><label for="values">Значення (об’єкт JSON)</label><textarea id="values" maxlength="200000" spellcheck="false"></textarea></div>
+<div class="actions"><button class="primary" id="run">Виконати</button><button type="button" id="sample">Завантажити зразок</button></div>
+</form>
+<div class="card"><h3 id="result-label">Результат</h3><p class="status" id="status" role="status"></p>
+<pre class="output" id="result" tabindex="0" aria-labelledby="result-label"></pre>
+<div class="actions output-actions"><button type="button" id="copy" disabled>Копіювати</button><button type="button" id="download" disabled>Завантажити</button></div>
+</div></div>
+<noscript><p>Увімкніть JavaScript для роботи інструментів.</p></noscript>
+</section>
+<div class="band"><section id="availability" class="inner availability"><div>
+<h2>Доступний для віддаленої роботи</h2>
+<p>Відкритий до міжнародної співпраці, коротких технічних аудитів і прототипів з визначеним обсягом.</p>
+</div><div id="contact"><h2>Контакт</h2><p>Опишіть бажаний результат і обмеження. У публічному треді використовуйте лише знеособлені приклади. Для приватного зв’язку потрібен погоджений канал.</p><a class="button primary" href="https://github.com/dmitro72-deputat">Профіль GitHub</a></div></section></div>
+</main>
+<footer><a href="https://github.com/dmitro72-deputat">GitHub</a> · Демонстрації використовують синтетичні зразки.</footer>
+</body></html>

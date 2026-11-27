@@ -1,0 +1,23 @@
+name: Portfolio tests
+on:
+  push:
+    branches: [main, portfolio-polish]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check docs/app.js
+      - run: node --check docs/logic.js
+      - run: node --test tests/tools.test.js
+      - run: npm install --no-save --package-lock=false @playwright/test@1.51.1
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test tests/browser.spec.cjs --workers=1
